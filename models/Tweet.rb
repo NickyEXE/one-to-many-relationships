@@ -18,4 +18,12 @@ class Tweet
     self.user.username
   end
 
+  def family
+    user.family
+  end
+
+  def family_name
+    family.name
+  end
+
 end

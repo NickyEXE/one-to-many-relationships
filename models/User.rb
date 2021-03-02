@@ -1,12 +1,18 @@
 class User
   attr_accessor :bio, :username
+  attr_reader :family
 
   @@all = []
 
-  def initialize(username, bio)
+  def initialize(username, bio, family)
     @username = username
     @bio = bio
+    @family = family
     @@all << self
+  end
+
+  def family_name
+    family.name
   end
 
   def self.most_tweets
